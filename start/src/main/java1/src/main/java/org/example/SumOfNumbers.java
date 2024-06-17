@@ -1,32 +1,47 @@
 package org.example;
 public class SumOfNumbers {
-    int n1;// n1 will store in data segment memory
-    int n2;
+     int n1;// n1 will store in data segment memory
+     int  n2;
 
-   static int sum;// sum is stored in metaspace(static)
-    public void sum(){
-        sum=n1+n2;
+     int sum;// sum is stored in metaspace(static)
+   double mul;
+   float div;
+    public  void sum() {
+        sum = n1 + n2;
+        System.out.println(sum);
     }
 
-   public static void main(String[] args) {
+    public  void mul(){
+        mul=n1*n2;
+        System.out.println(mul);
 
-       Anuj anuj=new Anuj();//"anuj" will be stored in heap
-       anuj.n1=20;
-       anuj.n2=13;
-       anuj.sum();
+    }
+public  void div(){
+        div=n1/n2;
+    System.out.println(div);
+}
 
-       Anujstatic.n1=23;
-       Anujstatic.n2=24;
-       Anujstatic.sum();
+    public static void main(String[] args) {
 
-       Anuj3 yes1=new Anuj3();
-       yes1.n1=12;
-       yes1.n2=14;
-       yes1.mul();
+        SumOfNumbers anuj=new SumOfNumbers();//"anuj" will be stored in heap
+        anuj.n1 = 20;
+        anuj.n2 = 13;
+        anuj.sum();
+        anuj.mul();
+        anuj.div();
+
+
+      Cars f=new Cars();
+    f.name="maruti";
+    f.model=123;
+    f.regno=3456;
+    f.modelinfo();
+
 
 
 
     }
+}
 
 
 
@@ -37,7 +52,21 @@ public class SumOfNumbers {
 
 
 
-        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
