@@ -1,4 +1,4 @@
-package org.example;
+package org.example.staticpackage;
 
 public class Anujstatic {
     static int n1;
