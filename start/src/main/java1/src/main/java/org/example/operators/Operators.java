@@ -1,13 +1,16 @@
 package org.example.operators;
 
+import org.example.startofcode.SumOfNumbers;
+import org.example.staticpackage.Anujstatic;
+
 public class Operators {
 
-    int n1;
-    int n2;                         //  LOGICAL OPERATORS("&&" and "||")
+    int m1;
+    int m2;                         //  LOGICAL OPERATORS("&&" and "||")
     int sum;
 
     public void add(int n1, int n2) {
-        sum = n1 + n2;
+        sum = m1 + m2;
 
         if (sum < 10 && sum > 4) {
 
@@ -21,6 +24,7 @@ public class Operators {
             System.out.println("i got a 10 and 5");
         }else if (sum!=15){
             System.out.println("i didnt get 10 and 5");
+            System.out.println(sum);
 
         }
             else{
@@ -31,6 +35,10 @@ public class Operators {
 public static void main(String[] args) {
         Operators s=new Operators();
         s.add(10,0);
+
+
+
+
 
 }
 

@@ -1,0 +1,7 @@
+there are 3 ways for main function
+a. it can be declared inside the class so that we can directly call th emethod without any class name or object creation
+b. outside the class
+c. using the static and non static concept(i.e in the other class creation of objects)
+
+
+ it is shown in the static and non static class in this package

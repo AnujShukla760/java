@@ -1,4 +1,4 @@
-package org.example;
+package org.example.startofcode;
 
 public class Cars {
  String name;

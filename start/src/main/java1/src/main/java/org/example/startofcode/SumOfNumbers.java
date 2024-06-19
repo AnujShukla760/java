@@ -1,4 +1,8 @@
-package org.example;
+package org.example.startofcode;
+
+import org.example.operators.Operators;
+import org.example.staticpackage.Anujstatic;
+
 public class SumOfNumbers {
      int n1;// n1 will store in data segment memory
      int  n2;
@@ -36,6 +40,9 @@ public  void div(){
     f.model=123;
     f.regno=3456;
     f.modelinfo();
+
+
+
 
 
 
