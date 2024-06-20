@@ -1,8 +1,11 @@
-package org.example.enumuse;
+package org.example.enumuseandscannerclass;
+
+import java.util.Scanner;
+
 public class ToUseEnum {
-    int num;
+   int num;
     String day;
-String dayname;
+   String dayname;
 
     public enum weekday {SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY}// very imp concept used to enumerate
     // the components that are facts i.e
@@ -53,22 +56,25 @@ String dayname;
     public void enumweekday() {
         weekday[] sh = weekday.values();
 
-        for (weekday day : sh) {
+        for (weekday day :sh){
 
             switch(day){
 
                 case SUNDAY:
-                  dayname=String.valueOf(day);  // assigning dayname the value of day in string
+                  dayname=String.valueOf(day);
+                    System.out.println(dayname);// assigning dayname the value of day in string
 
                   break;
 
                 case MONDAY:
                     dayname=String.valueOf(day);
+                    System.out.println(dayname);
 
                     break;
 
                 case TUESDAY:
                     dayname=String.valueOf(day);
+                    System.out.println(dayname);
 
                     break;
 
@@ -76,16 +82,25 @@ String dayname;
                     System.out.println("other day");
 
             }
-            System.out.println(dayname);
+
         }
     }
 
-    public static void main(String[] args) {
+    public  void main(String[] args) {
         ToUseEnum en=new ToUseEnum();
-        en.num=2;
-        en.switchstatement();
-         en.dayname();
-         en.enumweekday();
+       // en.num=1;// here i will take input at run time i.e no hardcode
+
+        Scanner scanner=new Scanner(System.in);
+        System.out.println("enter the number"); //scanner class is used to provide input at runtime
+       String number=scanner.nextLine();
+       en.num=Integer.parseInt(number);
+        System.out.println("the no ;is " +  en.num);
+
+         en.switchstatement();
+      en.dayname();
+      en.enumweekday();
+
+
     }
 }
 
