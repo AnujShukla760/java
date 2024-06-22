@@ -37,7 +37,7 @@ public class MainClass {
         bt.printd();
 
         try (Connection connection = d.db1()) {
-            String createQuery="CREATE TABLE WORKER (Name VARCHAR(50), WorkerNo int, FatherName VARCHAR(50))";
+            String createQuery="CREATE TABLE if not exists WORKER (Name VARCHAR(50), WorkerNo int, FatherName VARCHAR(50))";
             Statement statements=connection.createStatement();
             statements.execute(createQuery);
             String query= STR."INSERT INTO WORKER (Name, WorkerNo, FatherName)values('\{bt.Name}','\{bt.WorkerNo}','\{bt.FatherName}')";
@@ -48,6 +48,8 @@ public class MainClass {
             String selectQuery="Select * from WORKER";
             ResultSet result= statements.executeQuery(selectQuery);
             System.out.println(result.getRow());
+
+
 
         } catch (SQLException e) {
             e.printStackTrace();
