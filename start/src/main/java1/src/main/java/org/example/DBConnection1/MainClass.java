@@ -45,7 +45,7 @@ public class MainClass {
             statements.executeUpdate(query);
             System.out.println("Successfully connected to the H2 database.");
 
-            String selectQuery="Select * from student";
+            String selectQuery="Select * from WORKER";
             ResultSet result= statements.executeQuery(selectQuery);
             System.out.println(result.getRow());
 
