@@ -20,10 +20,13 @@ public class ThisClass {
 
     }
 
-    public  ThisClass(int Age, String Name,int RollNo ) { // parameterised method (constructor)
-        this.RollNo = RollNo;
+
+
+   public  ThisClass(int Age,String Name,int RollNo){ //(constructor)
+       this.RollNo = RollNo;
         this.Age = Age;
         this.Name = Name; }
+
 
 
 
