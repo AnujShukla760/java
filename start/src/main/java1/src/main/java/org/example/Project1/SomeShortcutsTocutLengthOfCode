@@ -1,0 +1,4 @@
+private Course stream;   //we can list other variables in "course" class as well
+                         //new concept it is a class not a variable. It is a new concept to declare a class
+                         //and include other variables in it as well. Here "stream" can contain various variables like
+                         //"coursename","branch" etc. IT REDUCES LENGTH OF THE CODE

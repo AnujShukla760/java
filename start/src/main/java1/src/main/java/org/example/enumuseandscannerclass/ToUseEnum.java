@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class ToUseEnum {
    int num;
-    String day;
+   String day;
    String dayname;
 
-    public enum weekday {SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY}// very imp concept used to enumerate
+    public enum weekday{SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY}// very imp concept used to enumerate
     // the components that are facts i.e
     // there are seven days namely and to store in array
 
@@ -61,8 +61,8 @@ public class ToUseEnum {
             switch(day){
 
                 case SUNDAY:
-                  dayname=String.valueOf(day);
-                    System.out.println(dayname);// assigning dayname the value of day in string
+                  dayname= String.valueOf(day);
+                    System.out.println(dayname); // assigning dayname the value of day in string
 
                   break;
 
@@ -93,10 +93,10 @@ public class ToUseEnum {
         Scanner scanner=new Scanner(System.in);
         System.out.println("enter the number"); //scanner class is used to provide input at runtime
        String number=scanner.nextLine();
-       en.num=Integer.parseInt(number);
-        System.out.println("the no ;is " +  en.num);
+       en.num= Integer.parseInt(String.valueOf(number));
+        System.out.println("the no ;is " + num);
 
-         en.switchstatement();
+        en.switchstatement();
       en.dayname();
       en.enumweekday();
 
