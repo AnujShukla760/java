@@ -5,9 +5,9 @@ public class Student {
     private String name;
 
     private String rollNumber;
-    private String stream;                   //new concept it is a class not a variable
+    private Course stream;                   //new concept it is a class not a variable
                                                //we can list other variables in "course" class as well
-
+   //(example of class as data type)
 
     private boolean hostelFacility;          //boolean---> true/false
 
@@ -75,11 +75,13 @@ public class Student {
         Student s=new Student();
         Identification i=new Identification();  //to access the identification class variables
         Address A=new Address();
+        Course c=new Course();
+
 
         s.setBusFacility(true);
         s.setName("Anuj");
         s.setHostelFacility(true);
-        s.stream="cse";
+
         s.result();
         i.setAdharno(9710);
         i.setPassportNo(1234);
@@ -89,7 +91,9 @@ public class Student {
         A.setPinCode(177001);
         A.setState("HIMACHAL");
         A.showadd();
-
+        c.setCourseName("BTech");
+        c.setBranch("cse");
+      c.show();
 
 
 

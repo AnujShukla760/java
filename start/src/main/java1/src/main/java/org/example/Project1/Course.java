@@ -23,7 +23,7 @@ public class Course {
     }
 public void show(){
 
-    System.out.println("The Branch Of The Student is"+branch);
-    System.out.println("The Enrolled Course is"+courseName);
+    System.out.println("The Branch Of The Student is  "+branch);
+    System.out.println("The Enrolled Course is  "+courseName);
 }
   }
