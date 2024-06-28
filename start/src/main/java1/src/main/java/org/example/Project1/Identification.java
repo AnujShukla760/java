@@ -1,38 +1,50 @@
 package org.example.Project1;
 
 public class Identification {
-
-
-    private int adharno;
-    private int passportNo;
-    private int dlNo;
-
-    public int getAdharno() {
-        return adharno;
+    public String getAdharNo() {
+        return adharNo;
     }
 
-    public void setAdharno(int adharno) {
-        this.adharno = adharno;
+    public void setAdharNo(String adharNo) {
+        this.adharNo = adharNo;
     }
 
-    public int getPassportNo() {
-        return passportNo;
+    public String getIdentificationValidity() {
+        return identificationValidity;
     }
 
-    public void setPassportNo(int passportNo) {
-        this.passportNo = passportNo;
+    public void setIdentificationValidity(String identificationValidity) {
+        this.identificationValidity = identificationValidity;
     }
 
-    public int getDlNo() {
+    public String getPanCardNo() {
+        return panCardNo;
+    }
+
+    public void setPanCardNo(String panCardNo) {
+        this.panCardNo = panCardNo;
+    }
+
+    public String getDlNo() {
         return dlNo;
     }
 
-    public void setDlNo(int dlNo) {
+    public void setDlNo(String dlNo) {
         this.dlNo = dlNo;
     }
-    public void showid(){
-        System.out.println("The Aadhar No is "+adharno);
-        System.out.println("The Passport No is "+passportNo);
-        System.out.println("The Dl NO is "+dlNo);
+
+    private String adharNo;
+    private String identificationValidity;
+    private String panCardNo;
+    private String dlNo;
+
+    @Override
+    public String toString() {
+        return "Identification{" +
+                "adharNo='" + adharNo + '\'' +
+                ", identificationValidity='" + identificationValidity + '\'' +
+                ", panCardNo='" + panCardNo + '\'' +
+                ", dlNo='" + dlNo + '\'' +
+                '}';
     }
 }

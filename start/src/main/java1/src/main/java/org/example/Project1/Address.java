@@ -1,27 +1,6 @@
 package org.example.Project1;
 
-public class Address {
-
-    private int pinCode;
-    private String dist;
-    private String state;
-
-
-    public int getPinCode() {
-        return pinCode;
-    }
-
-    public void setPinCode(int pinCode) {
-        this.pinCode = pinCode;
-    }
-
-    public String getDist() {
-        return dist;
-    }
-
-    public void setDist(String dist) {
-        this.dist = dist;
-    }
+public class Address{
 
     public String getState() {
         return state;
@@ -31,11 +10,32 @@ public class Address {
         this.state = state;
     }
 
-   public void showadd(){
-       System.out.println("The Pincode Of the Student Area is " +pinCode);
-       System.out.println("The Distict Of Student Is "+dist);
-       System.out.println("Name Of The State is "+ state);
+    public String getDistrict() {
+        return district;
+    }
 
-   }
+    public void setDistrict(String district) {
+        this.district = district;
+    }
 
+    public int getPinCode() {
+        return pinCode;
+    }
+
+    public void setPinCode(int pinCode) {
+        this.pinCode = pinCode;
+    }
+
+    private String state;
+   private String district;
+   private int pinCode;
+
+    @Override
+    public String toString() {
+        return "Address{" +
+                "state='" + state + '\'' +
+                ", district='" + district + '\'' +
+                ", pinCode=" + pinCode +
+                '}';
+    }
 }

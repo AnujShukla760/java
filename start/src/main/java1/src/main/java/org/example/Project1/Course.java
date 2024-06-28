@@ -1,10 +1,13 @@
 package org.example.Project1;
 
 public class Course {
+    public String getSession() {
+        return session;
+    }
 
-    private String branch;
-
-    private String courseName;
+    public void setSession(String session) {
+        this.session = session;
+    }
 
     public String getBranch() {
         return branch;
@@ -14,16 +17,14 @@ public class Course {
         this.branch = branch;
     }
 
-    public String getCourseName() {
-        return courseName;
-    }
+    private String session;
+    private String branch;
 
-    public void setCourseName(String courseName) {
-        this.courseName = courseName;
+    @Override
+    public String toString() {
+        return "Course{" +
+                "session='" + session + '\'' +
+                ", branch='" + branch + '\'' +
+                '}';
     }
-public void show(){
-
-    System.out.println("The Branch Of The Student is  "+branch);
-    System.out.println("The Enrolled Course is  "+courseName);
 }
-  }

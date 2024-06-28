@@ -1,25 +1,10 @@
 package org.example.Project1;
 
+import org.w3c.dom.ls.LSOutput;
+
+import java.util.Scanner;
+
 public class Student {
-
-    private String name;
-
-    private String rollNumber;
-    private Course stream;                   //new concept it is a class not a variable
-                                               //we can list other variables in "course" class as well
-   //(example of class as data type)
-
-    private boolean hostelFacility;          //boolean---> true/false
-
-    private boolean busFacility;
-
-    private Identification identification;  //||ly we can add various variables to identification as well
-                                              //as we did in "course" class
-
-    private Address address;                   //similarly for "address" class as well
-
-    private Gender gender;
-
     public String getName() {
         return name;
     }
@@ -28,15 +13,45 @@ public class Student {
         this.name = name;
     }
 
-    public String getRollNumber() {
-        return rollNumber;
+    public String getRollNo() {
+        return rollNo;
     }
 
-    public void setRollNumber(String rollNumber) {
-        this.rollNumber = rollNumber;
+    public void setRollNo(String rollNo) {
+        this.rollNo = rollNo;
     }
 
+    public Course getStream() {
+        return stream;
+    }
 
+    public void setStream(Course stream) {
+        this.stream = stream;
+    }
+
+    public Identification getIdentification() {
+        return identification;
+    }
+
+    public void setIdentification(Identification identification) {
+        this.identification = identification;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
+    }
 
     public int getLibraryCard() {
         return libraryCard;
@@ -45,8 +60,6 @@ public class Student {
     public void setLibraryCard(int libraryCard) {
         this.libraryCard = libraryCard;
     }
-
-    private int libraryCard;
 
     public boolean isHostelFacility() {
         return hostelFacility;
@@ -63,44 +76,80 @@ public class Student {
     public void setBusFacility(boolean busFacility) {
         this.busFacility = busFacility;
     }
-    public void result(){
-        System.out.println("The Name Of Student Is "  +   name);
-        System.out.println("The Stream Of the Student Is "   +     stream);
-        System.out.println("The Student Has Hostel AS "+ hostelFacility);
-        System.out.println("The Student Has Bus As "+ busFacility);
 
+    private String name;
+    private String rollNo;
+    private Course stream;
+    private Identification identification;
+    private Address address;
+    private Gender gender;
+    private int libraryCard;
+    private boolean hostelFacility;
+    private boolean busFacility;
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", rollNo='" + rollNo + '\'' +
+                ", stream=" + stream +
+                ", identification=" + identification +
+                ", address=" + address +
+                ", gender=" + gender +
+                ", libraryCard=" + libraryCard +
+                ", hostelFacility=" + hostelFacility +
+                ", busFacility=" + busFacility +
+                '}';
     }
 
     public static void main(String[] args) {
-        Student s=new Student();
-        Identification i=new Identification();  //to access the identification class variables
-        Address A=new Address();
-        Course c=new Course();
+        Student s = new Student();
+        Course c = new Course();
+        Gender g = new Gender();
+        Address a = new Address();
+        Identification i = new Identification();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter The Name Of Student");
+        String Name = scanner.nextLine();
+        s.setName(Name);
+
+        System.out.println("Enter The RollNo Of Student");
+        String RollNo = scanner.nextLine();
+        s.setRollNo(RollNo);
 
 
-        s.setBusFacility(true);
-        s.setName("Anuj");
-        s.setHostelFacility(true);
-
-        s.result();
-        i.setAdharno(9710);
-        i.setPassportNo(1234);
-        i.setDlNo(225373);
-        i.showid();
-        A.setDist("HAMIRPUR");
-        A.setPinCode(177001);
-        A.setState("HIMACHAL");
-        A.showadd();
-        c.setCourseName("BTech");
-        c.setBranch("cse");
-      c.show();
+        System.out.println("Enter The Branch of the Student");
+        String Branch = scanner.nextLine();
+        c.setBranch(Branch);
 
 
+        System.out.println("Enter The Session of the Course");
+        String Session = scanner.nextLine();
+        c.setSession(Session);
+        s.setStream(c);
 
-    }
+        System.out.println("Enter The AadharNo of the Student");
+        String AadharNo = scanner.nextLine();
+        i.setAdharNo(AadharNo);
+        System.out.println("Enter The PancardNo of the Student");
+        String PancardNo = scanner.nextLine();
+        i.setPanCardNo(PancardNo);
+        System.out.println("Enter the Identifiaction validity");
+        String Identification = scanner.nextLine();
+        i.setIdentificationValidity(Identification);
+        System.out.println("Enter The Gender of the Student");
+        String Gender = scanner.nextLine();
+
+        System.out.println("IS there hostel facility?");
+        String hostel = scanner.nextLine();
+        s.setHostelFacility(Boolean.parseBoolean(hostel));
+
+        System.out.println("is there bus facility");
+        String bus = scanner.nextLine();
+        s.setBusFacility(Boolean.parseBoolean(bus));
+
+        System.out.println(s);
 
 
 
-
-
-}
+    }}
