@@ -1,0 +1,6 @@
+What do you mean by abstraction?
+
+Abstraction in Java refers to hiding the implementation details
+ of a code and exposing only the necessary information to the user.
+ It provides the ability to simplify complex systems by ignoring irrelevant details and reducing complexity.
+ Java provides many in-built abstractions and few tools to create our own.

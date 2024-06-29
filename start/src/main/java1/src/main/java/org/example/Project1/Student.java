@@ -105,7 +105,7 @@ public class Student {
     public static void main(String[] args) {
         Student s = new Student();
         Course c = new Course();
-        Gender g = new Gender();
+       Gender g = new Gender();
         Address a = new Address();
         Identification i = new Identification();
         Scanner scanner = new Scanner(System.in);
@@ -137,8 +137,10 @@ public class Student {
         System.out.println("Enter the Identifiaction validity");
         String Identification = scanner.nextLine();
         i.setIdentificationValidity(Identification);
-        System.out.println("Enter The Gender of the Student");
-        String Gender = scanner.nextLine();
+
+        s.setIdentification(i);
+//        System.out.println("Enter The Gender of the Student");
+//        String Gender = scanner.nextLine();
 
         System.out.println("IS there hostel facility?");
         String hostel = scanner.nextLine();
@@ -148,6 +150,22 @@ public class Student {
         String bus = scanner.nextLine();
         s.setBusFacility(Boolean.parseBoolean(bus));
 
+        System.out.println("Enter the pincode of the Student Address");
+        String pincode=scanner.nextLine();
+        a.setPinCode(Integer.parseInt(pincode));
+
+        System.out.println("Enter the Districtt in Which student Lives");
+        String Districtt=scanner.nextLine();
+        a.setDistrict(Districtt);
+
+//        System.out.println("Enter the Gender of the Student");
+//        String gender=scanner.nextLine();
+//        Gender gg= Gender.valueOf(gender);
+//        System.out.println(gg);
+//        s.setGender(gg);
+
+
+        s.setAddress(a);
         System.out.println(s);
 
 

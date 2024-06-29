@@ -1,0 +1,35 @@
+Overloading:--->
+
+1. It is a feature under the POLYMORPHISM concept which means POLY(Many)  MORPHISM(forms)
+and in this the same name methods can be created with same functionality and can be called to provide result.
+
+2. It is also called as the COMPILE TIME POLYMORPHISM because in this the compiler shows the error
+at the compile time that is after execution of program there would be no error in the program bcz the
+program will not run if there is any error in it.
+
+3.In this the functionality of the Methods is same but the way of their declaration that is their parameters,
+data types may differ.
+
+4. It is done within the same class
+
+    (content from internet about overloading)
+
+  What is Method Overloading in Java?
+   Method overloading in Java means having two or more methods (or functions) in a class with the same name
+   and different arguments (or parameters).
+   It can be with a different number of arguments or different data types of arguments.
+
+
+   OVERRIDING
+
+ 1. More than one class is needed to perform the Overriding
+ 2.In this the name of the methods is same but their functionality is different.
+ 3.It is also called as RUN TIME POLYMORPHISM bcz the compiler will not show any error in the code
+ but after compilation and during run time the error will be shown if the code persists any error.
+
+
+    (from google)
+
+ In Java, Overriding is a feature that allows a subclass or child class to provide a specific implementation of a method
+ that is already provided by one of its super-classes or parent classes. When a method in a subclass has the same name, the same parameters or signature, and the same return type(or sub-type) as a method in its super-class,
+  then the method in the subclass is said to override the method in the super-class.
