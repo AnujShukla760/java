@@ -9,5 +9,16 @@ public class AM1 {
                          // (uncomment it to see real implementation )
         m.setAge(21);  //by using getter and setter we are able to access "age" out of its class
         m.shown();
+
+        ProtectedAM p=new ProtectedAM();
+        p.num=1;   // i  can access it out of the class as well but we cant access it out of the package
+                  // i.e ("AccessModifiers")
+
+        p.num1=12;
+        p.sum();
+
+
+
+
     }
 }

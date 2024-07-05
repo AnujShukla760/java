@@ -1,0 +1,17 @@
+1.  private------->
+
+In this access modifier we cant access the variables or the methods outside of the class
+and to access the same we need the Getter() and Setter() Methods in our code.
+It cant be used instead of being in the same package as well
+
+
+
+2. public-------->
+
+In this access modifier we can access the variables and the methods outside of the class as well as
+out of the package in which the class is created.
+
+3. protected------->
+
+In this type of the access modifier we can access the variables and the methods within and outside of the class
+but inside the same package only.
